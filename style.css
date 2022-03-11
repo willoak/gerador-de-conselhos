@@ -30,6 +30,7 @@ body {
   border-radius: 10px;
   color: var(--white-color);
   text-align: center;
+  transition: 0.3s;
 }
 
 h1 {
@@ -77,11 +78,24 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 0.2s ease-in;
 }
 .btn .img:hover {
   background-color: var(--white-color);
 }
 .btn .img img {
   width: 40%;
+}
+.smooth {
+  transform: translate3d(0, 20px, 0);
+}
+.rotate {
+  animation: rotate 1s ease-in infinite forwards;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
