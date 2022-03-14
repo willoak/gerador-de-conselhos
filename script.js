@@ -17,8 +17,6 @@ function getAdvice() {
       btn.classList.remove("rotate");
       container.classList.remove("smooth");
     });
-
-  console.log(container.clientWidth, container.clientHeight);
 }
 getAdvice();
 btn.addEventListener("click", getAdvice);
