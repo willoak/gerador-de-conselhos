@@ -5,6 +5,7 @@ const idAdvice = document.querySelector("#idAdvice");
 const container = document.querySelector(".container");
 
 function getAdvice() {
+  console.log(api);
   btn.classList.add("rotate");
   container.classList.add("smooth");
   fetch(api)
@@ -12,7 +13,7 @@ function getAdvice() {
       return response.json();
     })
     .then(function (data) {
-      advice.innerHTML = data.slip.advice;
+      advice.innerHTML = `"${data.slip.advice}"`;
       idAdvice.innerHTML = data.slip.id;
       btn.classList.remove("rotate");
       container.classList.remove("smooth");
